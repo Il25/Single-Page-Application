@@ -11,7 +11,7 @@ const getUsers = async(url) => {
 
 function* usersWorker () {
     try {
-        const result = yield call(getUsers, "https://jsonplaceholder.typicode.com/users/");
+        const result = yield call(getUsers, "https://jsonplaceholder.typicode.com/users");
         yield put(setUsers(result));
     } catch (error) {
         console.warn("usersWorker:", error);

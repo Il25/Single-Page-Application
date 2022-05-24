@@ -6,3 +6,10 @@ export const setUsers = (data) => {
         payload: data,
     });
 };
+
+export const setUserPosts = (data) => {
+    return({
+        type: actionTypes.SET_USER_POSTS,
+        payload: data,
+    });
+};

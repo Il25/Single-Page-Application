@@ -6,3 +6,10 @@ export const setPosts = (data) => {
         payload: data,
     });
 };
+
+export const setPostComments = (data) => {
+    return({
+        type: actionTypes.SET_POST_COMMENTS,
+        payload: data,
+    })
+}

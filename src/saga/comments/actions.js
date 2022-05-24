@@ -1,8 +1,7 @@
 import { actionTypesSaga } from "./actionTypes";
 
-export const getComments = (data) => {
+export const getComments = () => {
     return({
         type: actionTypesSaga.GET_COMMENTS,
-        payload: data,
     });
 };

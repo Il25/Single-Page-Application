@@ -10,10 +10,14 @@ const getComments = async(url) => {
 };
 
 function* commentsWorker () {
-    const result = yield call(getComments, "https://jsonplaceholder.typicode.com/comments/");
-    yield put(setComments(result));
+    try {
+        const result = yield call(getComments, "https://jsonplaceholder.typicode.com/comments");
+        yield put(setComments(result));
+    } catch (error) {
+        console.warn('commentsWorker: ', error);
+    }
 };
 
 export function* commentsWatcher () {
-    yield takeEvery(actionTypesSaga.GET_USERS, commentsWorker);
+    yield takeEvery(actionTypesSaga.GET_COMMENTS, commentsWorker);
 };

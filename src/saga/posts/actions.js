@@ -1,3 +1,7 @@
-export const actionTypesSaga = {
-    GET_POSTS: "GET_POSTS",
+import { actionTypesSaga } from "./actionTypes";
+
+export const getPosts = () => {
+    return({
+        type: actionTypesSaga.GET_POSTS,
+    });
 };

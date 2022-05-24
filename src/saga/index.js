@@ -5,6 +5,6 @@ import { usersWatcher } from "./users";
 
 export function* rootSaga () {
     yield spawn(postsWatcher);
-    yield spawn(commentsWatcher);
     yield spawn(usersWatcher);
+    yield spawn(commentsWatcher);
 };

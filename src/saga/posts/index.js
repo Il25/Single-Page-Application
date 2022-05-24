@@ -11,7 +11,7 @@ const getPosts = async(url) => {
 
 function* postsWorker () {
     try{
-        const result = yield call(getPosts, "https://jsonplaceholder.typicode.com/posts/");
+        const result = yield call(getPosts, "https://jsonplaceholder.typicode.com/posts");
         yield put(setPosts(result));
     } catch (error) {
         console.warn("postsWorker: ", error)
@@ -19,5 +19,5 @@ function* postsWorker () {
 };
 
 export function* postsWatcher () {
-    yield takeEvery(actionTypesSaga.GET_USERS, postsWorker);
+    yield takeEvery(actionTypesSaga.GET_POSTS, postsWorker);
 };

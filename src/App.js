@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './components/header';
-import Footer from './components/footer';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Users from './screens/users';
 import Posts from './screens/posts';
+import Header from './components/header';
+import Footer from './components/footer';
 
 class App extends React.Component {
 
