@@ -5,7 +5,7 @@ const Posts = () => {
     
     return (
         <div >
-           hello
+           <div className="posts_title">ALL POSTS</div>
         </div>
     );
 };

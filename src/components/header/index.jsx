@@ -1,6 +1,6 @@
 import React from "react";
-import "./index.css"
 import { Link } from "react-router-dom";
+import "./index.css"
 
 const Header = () => {
     
@@ -18,7 +18,7 @@ const Header = () => {
                             Users
                         </Link>
                     </li>
-                </ul>    
+                </ul>
             </div>
         </header>   
     );

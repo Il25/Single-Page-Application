@@ -5,7 +5,7 @@ const Users= () => {
     
     return (
         <div>
-            hi
+            <div className="users_title">ALL USERS</div>
         </div>
     );
 };
