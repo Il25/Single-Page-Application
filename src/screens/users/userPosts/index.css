@@ -1,32 +1,38 @@
-.comment_case {
+.userPosts_case {
     border-radius: 10px;
     border: 2px solid rgb(11, 12, 12);
     border-radius: 10px;
     margin: 10px;
-    padding: 5px;
+    padding: 5px; 
+    cursor: pointer;
+    transition: .5s ease all;
 }
 
-.modal {
+.userPosts_case:hover {
+    box-shadow: 0 5px 10px rgb(38, 38, 38);
+}
+
+.userPosts_modal {
     position: fixed;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(100, 161, 162);
+    background-color: rgb(155, 194, 194);
     transition: .5s ease all;
     border-radius: 10px;
     padding: 35px;
-    width: 800px;
-    height: 500px;
+    width: 1000px;
+    height: 620px;
     overflow: auto;
 }
 
-.openModal {
+.userPosts_openModal {
     display: flex;
     border: 1 solid black;
 }
 
-.close_button {
+.userPosts_close_button {
     padding: 5px;
     margin-top: 10px;
     cursor: pointer;
@@ -39,6 +45,6 @@
     transition: .5s ease all;
 }
 
-.close_button:hover {
+.userPosts_close_button:hover {
     box-shadow: 0 5px 10px rgb(22, 22, 22);
 }

@@ -9,7 +9,6 @@ import "./index.css";
 const Posts = () => {
     const dispatch = useDispatch();
     const postsScreen = useSelector(state => state.posts.posts);
-    const postComments = useSelector(state => state.comments.comments);
 
     const [commentModal, setCommentModal] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
@@ -27,8 +26,7 @@ const Posts = () => {
     const getPostComments = (id) => {
         setCommentModal(true);
         dispatch(getComments(id));
-        console.log(id)
-    }
+    };
 
     return (
         <div className="posts">
@@ -44,7 +42,7 @@ const Posts = () => {
                 countOfPosts={countOfPosts} 
                 totalPosts={postsScreen.length} 
             />
-            <Comments modal={commentModal} setModal={setCommentModal} />
+            <Comments commentModal={commentModal} setCommentModal={setCommentModal} />
         </div>
     );
 };

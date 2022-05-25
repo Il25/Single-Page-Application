@@ -2,15 +2,15 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./index.css";
 
-const Comments = ( { modal, setModal } ) => {
+const Comments = ( { commentModal, setCommentModal } ) => {
     const comments = useSelector(state => state.comments.comments);
 
     const closeModal = () => {
-        setModal(false);
+        setCommentModal(false);
     };
 
     return (
-        <div className={modal ? 'modal openModal' : 'modal'}>
+        <div className={commentModal ? 'modal openModal' : 'modal'}>
             <h1>Comments to this Post</h1>
             {comments?.map((comment, i) => (
                 <div className="comment_case" key={i}>
