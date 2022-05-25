@@ -9,9 +9,9 @@ const getComments = async(url) => {
     return response;
 };
 
-function* commentsWorker () {
+function* commentsWorker (action) {
     try {
-        const result = yield call(getComments, "https://jsonplaceholder.typicode.com/comments");
+        const result = yield call(getComments, `https://jsonplaceholder.typicode.com/posts/${action.id}/comments`);
         yield put(setComments(result));
     } catch (error) {
         console.warn('commentsWorker: ', error);

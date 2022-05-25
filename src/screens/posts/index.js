@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getComments } from "../../saga/comments/actions";
 import { getPosts } from "../../saga/posts/actions";
+import Comments from "../comments";
 import Pagination from "../pagination";
 import "./index.css";
 
@@ -10,6 +11,7 @@ const Posts = () => {
     const postsScreen = useSelector(state => state.posts.posts);
     const postComments = useSelector(state => state.comments.comments);
 
+    const [commentModal, setCommentModal] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [countOfPosts] = useState(10);
     const lastPostIndex = currentPage * countOfPosts;
@@ -20,14 +22,19 @@ const Posts = () => {
 
     useEffect(() => {
         dispatch(getPosts());
-        dispatch(getComments());
     }, []);
+
+    const getPostComments = (id) => {
+        setCommentModal(true);
+        dispatch(getComments(id));
+        console.log(id)
+    }
 
     return (
         <div className="posts">
             <div className="posts_title">ALL POSTS</div>
             {currentPosts?.map((post, i) => (
-                <div className="post_screen_title" key={i}>
+                <div onClick={() => getPostComments(post.id)} className="post_screen_title" key={i}>
                     <h1>{post?.title}</h1>
                     <p>{post?.body}</p>
                 </div>
@@ -37,6 +44,7 @@ const Posts = () => {
                 countOfPosts={countOfPosts} 
                 totalPosts={postsScreen.length} 
             />
+            <Comments modal={commentModal} setModal={setCommentModal} />
         </div>
     );
 };

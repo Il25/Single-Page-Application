@@ -16,11 +16,11 @@ const Users= () => {
            <div className="users_title">ALL USERS</div>
            {usersScreen?.map((user, i) => (
                <div className="users_screen" key={i}>
-                    <p>Name: <i>{user?.name}</i></p>
-                    <p>User name: <i>{user?.username}</i></p>
-                    <p>Email: <i>{user?.email}</i></p>
-                    <p>Phone: <i>{user?.phone}</i></p>
-                    <p>Website: <i>{user?.website}</i></p>
+                    <p><b>Name:</b> <i>{user?.name}</i></p>
+                    <p><b>User name:</b> <i>{user?.username}</i></p>
+                    <p><b>Email:</b> <i>{user?.email}</i></p>
+                    <p><b>Phone:</b> <i>{user?.phone}</i></p>
+                    <p><b>Website:</b> <i>{user?.website}</i></p>
                 </div>
            ))}
         </div>
