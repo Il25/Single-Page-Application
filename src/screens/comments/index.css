@@ -1,0 +1,44 @@
+.comment_case {
+    border-radius: 10px;
+    border: 2px solid rgb(11, 12, 12);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(100, 161, 162);
+    transition: .5s ease all;
+    border-radius: 10px;
+    padding: 35px;
+    width: 800px;
+    height: 500px;
+    overflow: auto;
+}
+
+.openModal {
+    display: flex;
+    border: 1 solid black;
+}
+
+.close_button {
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(81, 137, 138);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .5s ease all;
+}
+
+.close_button:hover {
+    box-shadow: 0 5px 10px rgb(22, 22, 22);
+}
