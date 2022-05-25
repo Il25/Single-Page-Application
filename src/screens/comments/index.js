@@ -4,7 +4,6 @@ import "./index.css";
 
 const Comments = ( { modal, setModal } ) => {
     const comments = useSelector(state => state.comments.comments);
-    console.log(comments)
 
     const closeModal = () => {
         setModal(false);
@@ -12,6 +11,7 @@ const Comments = ( { modal, setModal } ) => {
 
     return (
         <div className={modal ? 'modal openModal' : 'modal'}>
+            <h1>Comments to this Post</h1>
             {comments?.map((comment, i) => (
                 <div className="comment_case" key={i}>
                     <p><b>Comment:</b> <i>{comment?.body}</i></p>
