@@ -1,0 +1,28 @@
+.pagination_page{
+    margin-top: 60px;
+}
+
+.pagination_li {
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+    transition: .5 all ease;
+    font-size: 14px;
+    font-weight: 900;
+    border: 2px solid rgb(0, 103, 105);
+   border-radius: 5px;
+   margin-right: 5px;
+}
+
+.pagination_page a {
+    text-decoration: none;
+    color: rgb(0, 103, 105);
+}
+
+.pagination_page a:hover {
+    color: black;
+}
+
+.pagination_page a:focus {
+    border-bottom: 2px solid rgb(0, 103, 105);
+}
