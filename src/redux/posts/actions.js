@@ -11,5 +11,5 @@ export const setPostComments = (data) => {
     return({
         type: actionTypes.SET_POST_COMMENTS,
         payload: data,
-    })
-}
+    });
+};

@@ -7,8 +7,6 @@ import UserPosts from "./userPosts";
 const Users= () => {
     const dispatch = useDispatch();
     const usersScreen = useSelector(state => state.users.users);
-    const userPosts = useSelector(state => state.users.userPosts);
-    console.log(userPosts);
 
     const [userPostsModal, setuserPostsModal] = useState(false);
 
