@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Users from './screens/users';
 import Posts from './screens/posts';
 import Header from './components/header';
@@ -12,10 +12,10 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Header/>
-          <Switch>
-            <Route exact path='/' component={Posts}/>
-            <Route exact path='/users' component={Users}/>
-          </Switch>
+          <Routes>
+            <Route exact path='/' element={<Posts/>}/>
+            <Route exact path='/users' element={<Users/>}/>
+          </Routes>
           <Footer/>
         </div>
       </Router>  
